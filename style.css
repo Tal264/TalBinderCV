@@ -204,7 +204,7 @@ a:hover {
   transform: translateY(-5px);
 }
 
-/* Footer */
+/* Footer - default */
 footer {
   background: #fafafa;
   padding: 20px;
@@ -212,6 +212,22 @@ footer {
   border-top: 1px solid #eee;
   font-size: 0.9rem;
   color: #777;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Footer - dark mode */
+body.dark footer {
+  background: #222;
+  color: #ddd;
+  border-top: 1px solid #444;
+}
+
+body.dark footer a {
+  color: #d4b483;
+}
+
+body.dark footer a:hover {
+  color: #f5e6d3;
 }
 
 /* Scroll Animations */
@@ -237,6 +253,36 @@ body.dark .timeline-item {
   color: #ddd;
 }
 
+/* Contact section */
+.contact-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.contact-video {
+  flex: 0 0 350px; /* larger video */
+  max-width: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.contact-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Contact icons */
 #contact i {
   margin-right: 8px;
@@ -250,7 +296,7 @@ body.dark .timeline-item {
   text-decoration: underline;
 }
 
-/* Responsive: stack on small screens */
+/* Hero and profile responsive */
 @media (max-width: 900px) {
   .profile-section {
     flex-direction: column;
@@ -266,23 +312,40 @@ body.dark .timeline-item {
   }
 }
 
-/* Dark mode */
-body.dark {
-  background: #111;
-  color: #ddd;
+/* Contact responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .contact-video {
+    width: 250px;
+    max-width: 250px;
+    margin-top: 20px;
+  }
 }
 
-/* Sections, projects, timeline backgrounds */
-body.dark .section, 
-body.dark .project-card,
-body.dark .timeline-item {
-  background: #222;
-  color: #ddd;
+/* Headers in dark mode */ body.dark h1, body.dark h2, body.dark h3 { color: #f5e6d3; /* or #fff for pure white */ }
+
+/* Full screen overlay */
+#welcomeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Headers in dark mode */
-body.dark h1,
-body.dark h2,
-body.dark h3 {
-  color: #f5e6d3; /* or #fff for pure white */
+#welcomeVideo {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
 }
