@@ -3,45 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Resume</title>
+  <title>Tal Binder's CV</title>
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- JavaScript -->
-  <script src="script.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-<!-- Header / Hero -->
-<header class="hero reveal">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="assets/towersvideo.mp4" type="video/mp4">
+<!--  Welcome Video Overlay -->
+<div id="welcomeOverlay">
+  <video id="welcomeVideo" autoplay muted playsinline>
+    <source src="./assets/welcome.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <div class="overlay"></div>
+</div> 
 
-  <div class="profile-section hero-content">
-    <div class="profile-text">
-      <h1>Tal Binder</h1>
-      <p class="tagline">B.Sc. Electronic Engineer | L&D Specialist | Junior Full-Stack Developer</p>
-      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
-      <button id="themeToggle" class="btn secondary">🌙 Dark Mode</button>
+<!-- Main Content -->
+<div id="mainContent">
+  <!-- Header / Hero -->
+  <header class="hero reveal">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="./assets/bgTowersVideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+
+    <div class="profile-section hero-content">
+      <div class="profile-text">
+        <h1>Tal Binder</h1>
+        <p class="tagline">B.Sc. Electronic Engineer | L&D Specialist | Junior Full-Stack Developer</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+        <button id="themeToggle" class="btn secondary">🌙 Dark Mode</button>
+      </div>
+      <img src="./assets/noBG.png" alt="Profile Picture" class="profile-pic">
     </div>
-    <img src="assets/noBG.png" alt="Profile Picture" class="profile-pic">
-  </div>
-</header>
+  </header>
 
-<!-- About -->
-<section id="about" class="section reveal">
-  <h2>About Me</h2>
-  <p>Results-driven professional with 10+ years in support, training, enablement, and knowledge management. Skilled in streamlining processes, fostering cross-team collaboration, and driving data-driven improvements in SaaS and AI-powered environments.</p>
-  <p>Newly graduated Full Stack Web Developer from Technion, showcasing skills through this interactive profile website built with HTML, CSS, JavaScript, and enhanced with AI-generated content, dark mode and animations.</p>
-  <p>Passionate about learning new technologies, harnessing AI for business optimization, and ready for the next career challenge.</p>
-</section>
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>Results-driven professional with 10+ years in support, training, enablement, and knowledge management. Skilled in streamlining processes, fostering cross-team collaboration, and leading data-driven improvements in SaaS and AI-powered environments.</p>
+    <p>Newly graduated Full Stack Web Developer from Technion, showcasing skills through this interactive profile website built with HTML, CSS, JavaScript, and enhanced with AI-generated content, dark mode and animations.</p>
+    <p>Passionate about learning new technologies, harnessing AI for business optimization, and ready for the next career challenge.</p>
+  </section>
 
 <!-- Skills -->
 <section id="skills" class="section reveal">
@@ -54,12 +64,13 @@
   </ul>
 </section>
 
+
 <!-- Experience -->
 <section id="experience" class="section reveal">
   <h2>Experience</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <h3><img src="assets/kalturaLogo.png" alt="Kaltura logo" />Knowledge Center Manager | Kaltura</h3>
+      <h3><img src="./assets/kalturaLogo.png" alt="Kaltura logo" />Knowledge Center Manager | Kaltura</h3>
       <span>2022 – 2025</span>
       <ul>
         <li>Led company-wide knowledge strategy, launching a global portal accessed by 500K+ annually.</li>
@@ -70,7 +81,7 @@
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/kalturaLogo.png" alt="Kaltura logo" />Technical Trainer | Kaltura</h3>
+      <h3><img src="./assets/kalturaLogo.png" alt="Kaltura logo" />Technical Trainer | Kaltura</h3>
       <span>2019 – 2022</span>
       <ul>
         <li>Delivered product training & webinars, explaining complex system functionality to both technical and non-technical users.</li>
@@ -79,7 +90,7 @@
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/kalturaLogo.png" alt="Kaltura logo" />Platinum Support Engineer | Kaltura</h3>
+      <h3><img src="./assets/kalturaLogo.png" alt="Kaltura logo" />Platinum Support Engineer | Kaltura</h3>
       <span>2017 – 2019</span>
       <ul>
         <li>Provided technical support to strategic customers, including API troubleshooting and log analysis.</li>
@@ -88,7 +99,7 @@
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/checkpointLogo.png" alt="Checkpoint logo" />High-End Support Engineer | Checkpoint</h3>
+      <h3><img src="./assets/checkpointLogo.png" alt="Checkpoint logo" />High-End Support Engineer | Checkpoint</h3>
       <span>2015 – 2017</span>
       <ul>
         <li>Tier 3 support for global enterprise clients, resolving firewall, routing protocols, and security software issues.</li>
@@ -97,7 +108,7 @@
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/skyvisionLogo.png" alt="Skyvision logo" />Technical Support Engineer | Skyvision</h3>
+      <h3><img src="./assets/skyvisionLogo.png" alt="Skyvision logo" />Technical Support Engineer | Skyvision</h3>
       <span>2012 – 2015</span>
       <ul>
         <li>Configured network components and remotely deployed connectivity solutions across distributed systems.</li>
@@ -112,19 +123,19 @@
   <h2>Education</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <h3><img src="assets/technionLogo.png" alt="Technion logo" />Full Stack Web Development Course | Technion – Israel Institute of Technology</h3>
+      <h3><img src="./assets/technionLogo.png" alt="Technion logo" />Full Stack Web Development Course | Technion – Israel Institute of Technology</h3>
       <span>2025</span>
       <p>JavaScript, HTML, CSS, REST API, Java, Node.js, Angular, React, Python, GraphQL, Git, Postman, Firebase, MongoDB, SQL, and AI for developers.</p>
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/ciscoLogo.png" alt="Cisco logo" />Cisco Certified Network Associate (CCNA) | Cisco</h3>
+      <h3><img src="./assets/ciscoLogo.png" alt="Cisco logo" />Cisco Certified Network Associate (CCNA) | Cisco</h3>
       <span>2015</span>
       <p>Routing and Switching.</p>
     </div>
 
     <div class="timeline-item">
-      <h3><img src="assets/shenkarLogo.png" alt="Shenkar logo" />B.Sc. Electronic Engineering | Shenkar Engineering. Design. Art.</h3>
+      <h3><img src="./assets/shenkarLogo.png" alt="Shenkar logo" />B.Sc. Electronic Engineering | Shenkar Engineering. Design. Art.</h3>
       <span>2007 – 2011</span>
       <p>Communication & RF, with a GPA of 83</p>
     </div>
@@ -135,7 +146,7 @@
 <section id="military" class="section reveal">
   <h2>Military Service</h2>
   <div class="timeline-item">
-    <h3><img src="assets/idfLogo.png" alt="IDF logo" />Medical Unit Operations | Air Force, IDF</h3>
+    <h3><img src="./assets/idfLogo.png" alt="IDF logo" />Medical Unit Operations | Air Force, IDF</h3>
     <span>2004 – 2006</span>
   </div>
 </section>
@@ -169,12 +180,27 @@
 
 <!-- Contact -->
 <section id="contact" class="section reveal">
-  <h2>Contact</h2>
-  <p><i class="fas fa-phone-alt"></i> Phone: +972 50-2345005</p>
-  <p><i class="fas fa-envelope"></i> Email: <a href="mailto:talbinder1@gmail.com">talbinder1@gmail.com</a></p>
-  <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/tal-binder/" target="_blank">linkedin.com/in/tal-binder</a></p>
-  <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Tal264" target="_blank">github.com/Tal264</a></p>
+ 
+  <div class="contact-container">
+    <div class="contact-info">
+       <h2>Contact</h2>
+      <p><i class="fas fa-phone-alt"></i> Phone: +972 50-2345005</p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:talbinder1@gmail.com">talbinder1@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/tal-binder/" target="_blank">linkedin.com/in/tal-binder</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Tal264" target="_blank">github.com/Tal264</a></p>
+    </div>
+    <div class="contact-video">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/liveTalVideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 </section>
+
+
+
+
 
 <!-- Footer -->
 <footer>
@@ -182,3 +208,4 @@
 </footer>
 </body>
 </html>
+
