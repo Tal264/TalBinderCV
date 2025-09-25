@@ -16,27 +16,29 @@
 </head>
 
 <body>
-<!--  Welcome Video Overlay -->
+
+<!-- Welcome Video Overlay -->
 <div id="welcomeOverlay">
-  <video id="welcomeVideo" autoplay muted playsinline>
-    <source src="./assets/welcome.mp4" type="video/mp4">
+  <video id="welcomeVideo" autoplay muted >
+    <source src="assets/welcome.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div> 
+</div>
+
 
 <!-- Main Content -->
-<div id="mainContent">
+<div id="mainContent" style="display: none;">
   <!-- Header / Hero -->
-  <header class="hero reveal">
+  <header>
     <video autoplay muted loop playsinline class="hero-video">
-      <source src="./assets/bgTowersVideo.mp4" type="video/mp4">
+      <source src="./assets/towersVideo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+    
     <div class="overlay"></div>
-
     <div class="profile-section hero-content">
       <div class="profile-text">
-        <h1>Tal Binder</h1>
+       <h1 class="hero">Tal Binder</h1>
         <p class="tagline">B.Sc. Electronic Engineer | L&D Specialist | Junior Full-Stack Developer</p>
         <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
         <button id="themeToggle" class="btn secondary">🌙 Dark Mode</button>
@@ -172,8 +174,8 @@
 
     <div class="project-card">
       <h3>Full Stack</h3>
-      <p><a href="https://github.com/Tal264/fullstack-project-1" target="_blank">Fullstack Project 1:</a> User management site using JSONPlaceholder REST API — built with JavaScript, HTML & CSS.</p>
-      <p><a href="https://github.com/Tal264/fullstack-project-2" target="_blank">Fullstack Project 2:</a> Web application for Movies & Subscription management including Server (MongoDB + Node.js) & Client (React)</p>
+      <p><a href="https://tal264.github.io/fullstack-project-1/" target="_blank">Fullstack Project 1:</a> User management site using JSONPlaceholder REST API — built with JavaScript, HTML & CSS.</p>
+      <p><a href="https://tal264.github.io/fullstack-project-2/" target="_blank">Fullstack Project 2:</a> Web application for Movies & Subscription management including Server (MongoDB + Node.js) & Client (React)</p>
     </div>
   </div>
 </section>
