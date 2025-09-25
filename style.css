@@ -302,15 +302,18 @@ body.dark .timeline-item {
 @media (max-width: 900px) {
   .profile-section {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end; /* push content down */
     text-align: center;
+    height: 100%; /* fill hero height */
   }
+
   .profile-pic {
-    position: relative;
-    bottom: auto;
-    right: auto;
+    position: absolute;   /* anchor inside hero */
+    bottom: 0;            /* stick to bottom */
+    left: 50%;            /* horizontal center */
+    transform: translateX(-50%); /* perfectly center */
     width: 300px;
-    margin-top: 20px;
+    margin-top: 0;        /* remove extra space */
   }
 }
 
