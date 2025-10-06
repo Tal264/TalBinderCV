@@ -446,7 +446,7 @@ body.dark h1, body.dark h2, body.dark h3 {
   pointer-events: none;
 }
 
-/* 🔧 Fix dark mode colors only on mobile */
+/* dark mode colors only on mobile */
 @media (max-width: 768px) {
   body.dark {
     background: #111;
