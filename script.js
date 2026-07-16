@@ -81,3 +81,41 @@ window.addEventListener("scroll", () => {
 topButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Navigation Drawer Toggle & Smooth Scroll
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+const navLinks = document.querySelectorAll(".nav-link");
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    // Swap icon between hamburger bars and close 'X'
+    const icon = navToggle.querySelector("i");
+    if (navMenu.classList.contains("active")) {
+      icon.className = "fas fa-times";
+    } else {
+      icon.className = "fas fa-bars";
+    }
+  });
+}
+
+// Smooth scroll & close mobile menu when link is clicked
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    // Smooth scroll to target section
+    const targetId = link.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close the mobile menu automatically after click
+    if (navMenu && navMenu.classList.contains("active")) {
+      navMenu.classList.remove("active");
+      navToggle.querySelector("i").className = "fas fa-bars";
+    }
+  });
+});
